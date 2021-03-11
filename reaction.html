@@ -17,9 +17,9 @@
   <p id="target">Your time</p>
     <p id="countdown">Count</p>
 
-    <button type="button" class="btn btn-primary" onclick="startTime()"> Start Timer</button>
+    <button type="button" class="btn btn-secondary" onclick="startTime()"> Start Timer</button>
     
-  <button type="button" class="btn btn-danger" onclick="recordReact()"> React Now</button>
+  <button type="button" class="btn btn-primary" onclick="recordReact()"> React Now</button>
 
   <script>
     var myTime = undefined;
@@ -28,6 +28,13 @@
       console.log(myTime);
       
     }
+
+    function getRandomIntInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+    }
+
     function startTime() {
       for (let i = 0; i < 4; i++) {
         var j = (3 - i) * 1000;
