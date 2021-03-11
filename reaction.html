@@ -28,4 +28,27 @@
       console.log(myTime);
       
     }
-    
+    function startTime() {
+      for (let i = 0; i < 4; i++) {
+        var j = (3 - i) * 1000;
+
+        setTimeout(() => {
+
+          document.getElementById("countdown").innerHTML = i;
+        }, j)
+      }
+      setTimeout(() => {
+        if (myTime == undefined)
+          document.getElementById("target").innerHTML = "Too Slow";
+        else {
+          var buttonTime = Date.now();
+          var diff = buttonTime - myTime;
+         
+          document.getElementById("target").innerHTML = "Time was " + diff + " milliseconds"
+          myTime = undefined
+        }
+      }, 3000)
+    }
+  </script>
+</body>
+</html>
